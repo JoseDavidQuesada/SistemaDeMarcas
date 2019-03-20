@@ -1,16 +1,8 @@
 <?php
-session_start();
+   session_start();
 
 	// Connection info. file
-	include 'config.php';	
-	
-	// Connection variables
-	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-	// Check connection
-	if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
+	require_once('../controlador/conexion.php');
 	
 	// data sent from form login.html 
 	$user = $_POST['user']; 
@@ -55,9 +47,9 @@ session_start();
 		<p><a href='edit-profile.php'>Edit Profile</a></p>	
         <p><a href='logout.php'>Logout</a></p></div>";
 
-        header('Location:../MarcasOriginal/home.php');
+        header('Location:/marcas/home.php');
 	
 	} else {
-        header('Location:../MarcasOriginal/index.php?log=error');			
+        header('Location:/marcas/index.php?log=error');			
 	}	
 ?>

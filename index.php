@@ -9,35 +9,34 @@
 </head>
 
 <body>
-
+	
 		<div class="container-fluid" style="margin-top: 100px;">
 		<div class="row">
 			<div class="col-lg-12">		
 				<div class="card">
 					<div class="loginBox">
-						<img src="img/kbDegradado.png" class="img-responsive" style="width: 200px; height: 200px; margin-bottom: 30px; margin-top: 10px;">
+						<img src="img/kbDegradado.png" class="img-responsive" style="width: 200px; height: 200px; margin-bottom: 30px; margin-top: 10px;" alt="PHP MySQL logos">
 						<h2>Incio de sesion</h2>
 
 						<?php if(isset($_GET['log']) == "error"){ ?>	
 
 						<div class="alert alert-danger" role="alert"> 
-                                 Tu usuario y contraseña no coinciden! 
-				 				<br> Por favor ingrese un usuario y contraseña valida.
+                Tu usuario y contraseña no coinciden! 
+								<br> Por favor ingrese un usuario y contraseña valida.
 							
-                        </div>
+            </div>
 
 						<?php } ?>	
 
-						<form action="validacion.php" method="post">                           	
+						<form action="controlador/validacion.php" method="post">                           	
 							<div class="form-group">									
 							<input type="user" class="form-control input-lg" name="user" placeholder="Usuario" required>        
 							</div>	
-													
+
 
 							<div class="form-group">        
 							<input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" required>       
 							</div>
-
 
 							<button type="submit" class="btn btn-success btn-block">Entrar</button>        
 							<br>

@@ -1,7 +1,4 @@
 <?php
-
-
-
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){  
 } else {
     echo "<div class='alert alert-danger' role='alert'>
@@ -9,6 +6,4 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     <p><a href='index.php'>Login Here!</a></p></div>";
     exit;
 }  
-
-
 ?>
