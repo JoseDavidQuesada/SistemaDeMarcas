@@ -9,47 +9,22 @@
 </head>
 
 <body>
-	
- <!--	<div class="logo">
- 		<div class="imagen">
- 		    <img src="img/umcaOscuro.png" style="width: 100%;">
-		</div>
-	</div>
-	<div class="inner">
 
-
-	<form method="POST" action="validacion.php">
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Usuario</label>
-		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su usuario" name="user">
-		   <small id="emailHelp" class="form-text text-muted">We'll never share your user with anyone else.</small> -->
-		<!--  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Contraseña</label>
-		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña" name="password">
-		  </div>
-		 <div class="form-check">
-		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-		    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-		  </div> -->
-		<!--  <button type="submit" class="btn btn-primary" style="margin-top: 50px;width: 100px;margin-left: 130px; background-color: #15424E; border: 1px solid #15424E">Entrar</button>
-	</form>
-	</div> -->
 		<div class="container-fluid" style="margin-top: 100px;">
 		<div class="row">
 			<div class="col-lg-12">		
 				<div class="card">
 					<div class="loginBox">
-						<img src="img/KESBOA.png" class="img-responsive" style="width: 100%; margin-bottom: 30px; margin-top: 10px;" alt="PHP MySQL logos">
+						<img src="img/kbDegradado.png" class="img-responsive" style="width: 200px; height: 200px; margin-bottom: 30px; margin-top: 10px;">
 						<h2>Incio de sesion</h2>
 
 						<?php if(isset($_GET['log']) == "error"){ ?>	
 
 						<div class="alert alert-danger" role="alert"> 
-                Tu usuario y contraseña no coinciden! 
-								<br> Por favor ingrese un usuario y contraseña valida.
+                                 Tu usuario y contraseña no coinciden! 
+				 				<br> Por favor ingrese un usuario y contraseña valida.
 							
-            </div>
+                        </div>
 
 						<?php } ?>	
 
@@ -57,20 +32,12 @@
 							<div class="form-group">									
 							<input type="user" class="form-control input-lg" name="user" placeholder="Usuario" required>        
 							</div>	
-							<?php 
-							
-						//	if(isset($_GET['log']) == "error"){ ?>	
-
-						<!--	<div class="form-group">        
-							<input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" required style="border: 1px solid red;">       
-							</div>	-->
-							<?php// }else{ ?>	
+													
 
 							<div class="form-group">        
 							<input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" required>       
 							</div>
 
-							<?php //} ?>	
 
 							<button type="submit" class="btn btn-success btn-block">Entrar</button>        
 							<br>

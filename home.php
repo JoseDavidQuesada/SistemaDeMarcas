@@ -20,14 +20,32 @@ session_start();
 
 <?php 
      require_once('controlador/seguridad.php');
+     require_once('controlador/header.php');
   ?>
 
-<header id="main-header">
-  <img src="img/KESBOA.png" class="img-responsive" style="width: 15%; height: 75%; margin-top: 10px;">
-  <a href="index.php"><img src="img/logout.svg" class="img-responsive" style=" height: 50%; margin-top: 20px; float: right; margin-right:18px; "><a>
-</header>
+  <div class="contenedorReloj">
+    <div class="widget">
+      <div class="reloj">
+        <p id="horas" class="horas"></p>
+        <p>:</p>
+        <p id="minutos" class="minutos"></p>
+        <p>:</p>
+        <div class="cajaSegundos">
+          <p id="ampm" class="ampm"></p>
+          <p id="segundos" class="segundos"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+  <div class="perfilInicio">
+
+     <div style="position: relative;">
+       <h1><p> <?php echo $_SESSION['cedula']?> </p></h1>
+     </div>
+
+  </div>
 
 <div class="contenedorMarca">
 
