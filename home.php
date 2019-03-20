@@ -9,19 +9,18 @@ session_start();
  <link rel="stylesheet" type="text/css" href="css/style.css"/>
  <link rel="stylesheet" type="text/css" href="css/custom.css"/>
   <link rel="stylesheet" type="text/css" href="css/reloj.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/reloj.js"></script>
+	<script type="text/javascript" src="js/marcas.js"></script>
 
 </head>
 <body>
 
-<!--<div style="text-align:center;padding:1em 0;">
-	<iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=large&timezone=America%2FCosta_Rica" width="100%" height="140" frameborder="0" seamless>
-	</iframe> 
-</div> -->
-
 <?php 
      require_once('controlador/seguridad.php');
      require_once('controlador/header.php');
-  ?>
+?>
+
 
   <div class="contenedorReloj">
     <div class="widget">
@@ -40,10 +39,11 @@ session_start();
 
 
   <div class="perfilInicio">
-
-     <div style="position: relative;">
-       <h1><p> <?php echo $_SESSION['cedula']?> </p></h1>
+   
+     <div style="position: relative; margin-left:25px;">
+       <h1><p> <?php echo $_SESSION['nombre']." ".$_SESSION['ape01']." ".$_SESSION['ape02'] ?>  </p></h1>
      </div>
+
 
   </div>
 
@@ -68,13 +68,11 @@ session_start();
 </div>
 
 
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	 <script type="text/javascript" src="js/reloj.js"></script>
-	 <script type="text/javascript" src="js/marcas.js"></script>
-	 <script>
+	<script>
         marcasClick(<?php echo $_SESSION['id'] ?>); 
         marcasValidacion();
-      </script>
+
+    </script>
 
 
 </body>

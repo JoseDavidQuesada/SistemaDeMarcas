@@ -2,15 +2,8 @@
 session_start();
 
 // Connection info. file
-include '../config.php';	
+require_once('../controlador/conexion.php');
 
-// Connection variables
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 if(isset($_POST['idPersona'])){
     $idPersona = $_POST['idPersona']; 
@@ -42,19 +35,44 @@ if(isset($_POST['marca'])){
 
 
             echo "Registro con exito";
-            echo " Hola ";
             echo $id ;
             echo "  ";
             echo $entrada; 
             
 
     }else if($identificador == 2){
+
+        if(isset( $_SESSION['idMarca']) and isset($_SESSION['mEntradaLaboral'])){
+            $marcaDiaria = $_SESSION['idMarca'];
+            
+            mysqli_query($conn, "update marca set mSalidaAlmuerzo = '".$marca."' where id =".$marcaDiaria."");                           
+
+            mysqli_close($conn); 
+            
+            echo "Registro con exito";
+           
+        }else{
+
+            echo "No entro en el if";
+        }
         
-        
-        
+     
         
     }else if($identificador == 3){
         
+        if(isset( $_SESSION['idMarca']) and isset($_SESSION['mEntradaLaboral'])){
+            $marcaDiaria = $_SESSION['idMarca'];
+            
+            mysqli_query($conn, "update marca set mEntradaAlmuerzo = '".$marca."' where id =".$marcaDiaria."");                           
+
+            mysqli_close($conn); 
+
+            echo "Registro con exito";
+            
+        }else{
+
+            echo "No entro en el if";
+        }
         
         
         
@@ -63,24 +81,12 @@ if(isset($_POST['marca'])){
             if(isset( $_SESSION['idMarca']) and isset($_SESSION['mEntradaLaboral'])){
                 $marcaDiaria = $_SESSION['idMarca'];
                 
-
                 mysqli_query($conn, "update marca set mSalidaLaboral = '".$marca."' where id =".$marcaDiaria."");                           
-
-                $result = mysqli_query($conn, "select id,mSalidaLaboral from marca where idPersona =".$idPersona." and id = ".$marcaDiaria."");    
 
                 mysqli_close($conn); 
 
-                $row = mysqli_fetch_assoc($result);
+                echo "Registro con exito";
 
-                $id = $row['id'];
-                $salida = $row['mSalidaLaboral'];
-               
-      
-                  echo "Registro con exito";
-                  echo "  ";
-                  echo $id ;
-                  echo "  ";
-                  echo $salida;
             }else{
 
                 echo "No entro en el if";

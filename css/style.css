@@ -102,3 +102,10 @@
 padding-bottom: 30px;
 
 }
+
+.btnVolver{
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-right: 300px;
+}
