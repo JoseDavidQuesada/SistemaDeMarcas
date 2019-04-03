@@ -1,0 +1,177 @@
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 440px;
+    width: calc(100% - 40px);
+    padding: 44px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    min-width: 320px;
+    min-height: 338px;
+    overflow: hidden;
+}
+.logo{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 440px;
+    width: calc(100% - 40px);
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    min-width: 320px;
+    min-height: 100px;
+    max-height: 110px;
+    overflow: hidden;
+    background-color: #15424E;
+}
+
+.imagen{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 35%;
+}
+
+#main-header{
+    background: white;
+    height: 60px;
+    line-height: 85px;
+    background-color: black;
+}
+
+.marcas{
+    margin-left: 16px;
+    /* margin: 2px; */
+    float: left;
+}
+.contenedorMarca{
+    margin: 0px auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 85%;
+    height: 75px;
+}
+.marca{
+    width: 670px;
+    height: 80px;
+    /* margin-left: 670px; */
+    margin: 0px auto;
+}
+
+.card {  
+    padding: 15px;
+    max-width: 400px;
+    height: auto;
+    margin: 10px auto;
+    text-align: center;
+}
+/* /end custom style for login page */
+.perfilInicio{
+    width: 100%;
+    height:300px;
+    /*border: 2px solid red; */
+}
+
+.logoIzquierda{
+    height: 100%;
+    width: 15%;
+    float: left;
+}
+
+.menu{
+    width: 40%;
+    margin: 0px auto;
+}
+
+.cardAdmin {  
+    padding: 15px;
+    max-width: 800px;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+}
+
+.row{
+padding-bottom: 30px;
+
+}
+
+.btnVolver{
+    position: relative;
+    float: right;
+    margin-right: 30px;
+}
+
+#iconosHeader{
+    height: 50%;
+    margin-top: 15px;
+    float: right;
+    margin-right: 20px;
+}
+
+.buttonInformes{
+    width: auto;
+    float: right;
+	margin-top: 4px; 
+	
+}
+.contenedorButtons{
+    width:400px;
+}
+
+.cardInforme {  
+    padding: 15px;
+    max-width: 97%;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+	border-radius: 10px;
+}
+.cardInformeBuscador {  
+    max-width: 1200px;
+    max-height: 80px;
+    border-radius: 30px;
+    margin: 10px auto;
+    background-color: white;
+}
+
+.informeCompleto{
+	height:80px;
+	border: 1px solid #F0EFEF;
+	
+	
+}
+
+.informeCompleto td{
+	height: 50px;
+    border: 1px solid #F0EFEF;
+    width: auto;
+    text-align: center;	
+}
+
+.informeCompleto:hover{
+    background-color: #F0EFEF;	
+}
+
+
+.headerTable{
+	
+	height:80px;
+	border: 1px solid #F0EFEF;
+	color: black;
+	font-color: white;
+}
+
+.headerTable th{
+	height: 50px;
+    border: 1px solid #F0EFEF;
+    width: auto;
+    text-align: center;	
+}
